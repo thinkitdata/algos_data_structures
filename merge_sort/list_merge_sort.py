@@ -1,3 +1,8 @@
+# Variables to count recursive function calls
+merge_sort_cntr  = 0
+split_cntr = 0
+merge_cntr = 0
+
 def merge_sort(list):
     """
     Sorts a list in ascending order
@@ -8,7 +13,11 @@ def merge_sort(list):
     Combine: Merge the sorted sublists created in previous step
     Takes O(kn log n) time
     """
+    # Count number of times this recursive function is called
+    global merge_sort_cntr
+    merge_sort_cntr += 1
 
+    print('merge_sort_cntr is ', merge_sort_cntr)
     print('> merge_sort(', end = "")
     print(list, end = "")
     print(')')
@@ -34,6 +43,11 @@ def split(list):
     Called as many times as needed to get to single element lists
     Takes overall O(k log n) time which is logarithmic time.  The k is due to Python's split operations
     """
+
+    # Count number of times this recursive function is called
+    global split_cntr
+    split_cntr += 1
+
     print('>>> split(', end = "")
     print(list, end = "")
     print(')')
@@ -58,6 +72,10 @@ def merge(left, right):
     merges them back in the correct order
     Runs in overall O(n) time which is linear time
     """
+
+    # Count number of times this recursive function is called
+    global merge_cntr
+    merge_cntr += 1
 
     l = []
     i = 0 # indexes in left list
@@ -102,3 +120,6 @@ print('Original list  ', alist)
 #print('verify_sorted equals ', verify_sorted(alist))
 print('Sorted list ', l)
 #print('verify_sorted equals ', verify_sorted(l))
+print('Number of merge_sort operations ', merge_sort_cntr)
+print('Number of split operations ', split_cntr)
+print('Number of merge operations ', merge_cntr)
