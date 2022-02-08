@@ -1,15 +1,20 @@
+merge_sort_cntr is  1
 > merge_sort([54, 62, 93, 17, 77, 31, 44, 55, 20])
 >>> split([54, 62, 93, 17, 77, 31, 44, 55, 20])
 >>> split return left  [54, 62, 93, 17] >>> split return right  [77, 31, 44, 55, 20]
+merge_sort_cntr is  2
 > merge_sort([54, 62, 93, 17])
 >>> split([54, 62, 93, 17])
 >>> split return left  [54, 62] >>> split return right  [93, 17]
+merge_sort_cntr is  3
 > merge_sort([54, 62])
 >>> split([54, 62])
 >>> split return left  [54] >>> split return right  [62]
+merge_sort_cntr is  4
 > merge_sort([54])
 single item merge_sort list is  [54]
 left merge_sort  [54]
+merge_sort_cntr is  5
 > merge_sort([62])
 single item merge_sort list is  [62]
 right merge_sort  [62]
@@ -18,12 +23,15 @@ right merge_sort  [62]
 >>>>>> right merge 2 is [54, 62]
 >>>>>> merge() returned  [54, 62]
 left merge_sort  [54, 62]
+merge_sort_cntr is  6
 > merge_sort([93, 17])
 >>> split([93, 17])
 >>> split return left  [93] >>> split return right  [17]
+merge_sort_cntr is  7
 > merge_sort([93])
 single item merge_sort list is  [93]
 left merge_sort  [93]
+merge_sort_cntr is  8
 > merge_sort([17])
 single item merge_sort list is  [17]
 right merge_sort  [17]
@@ -39,15 +47,19 @@ right merge_sort  [17, 93]
 >>>>>> right merge 2 is [17, 54, 62, 93]
 >>>>>> merge() returned  [17, 54, 62, 93]
 left merge_sort  [17, 54, 62, 93]
+merge_sort_cntr is  9
 > merge_sort([77, 31, 44, 55, 20])
 >>> split([77, 31, 44, 55, 20])
 >>> split return left  [77, 31] >>> split return right  [44, 55, 20]
+merge_sort_cntr is  10
 > merge_sort([77, 31])
 >>> split([77, 31])
 >>> split return left  [77] >>> split return right  [31]
+merge_sort_cntr is  11
 > merge_sort([77])
 single item merge_sort list is  [77]
 left merge_sort  [77]
+merge_sort_cntr is  12
 > merge_sort([31])
 single item merge_sort list is  [31]
 right merge_sort  [31]
@@ -56,18 +68,23 @@ right merge_sort  [31]
 >>>>>> left merge 2 is  [31, 77]
 >>>>>> merge() returned  [31, 77]
 left merge_sort  [31, 77]
+merge_sort_cntr is  13
 > merge_sort([44, 55, 20])
 >>> split([44, 55, 20])
 >>> split return left  [44] >>> split return right  [55, 20]
+merge_sort_cntr is  14
 > merge_sort([44])
 single item merge_sort list is  [44]
 left merge_sort  [44]
+merge_sort_cntr is  15
 > merge_sort([55, 20])
 >>> split([55, 20])
 >>> split return left  [55] >>> split return right  [20]
+merge_sort_cntr is  16
 > merge_sort([55])
 single item merge_sort list is  [55]
 left merge_sort  [55]
+merge_sort_cntr is  17
 > merge_sort([20])
 single item merge_sort list is  [20]
 right merge_sort  [20]
@@ -103,3 +120,6 @@ right merge_sort  [20, 31, 44, 55, 77]
 >>>>>> merge() returned  [17, 20, 31, 44, 54, 55, 62, 77, 93]
 Original list   [54, 62, 93, 17, 77, 31, 44, 55, 20]
 Sorted list  [17, 20, 31, 44, 54, 55, 62, 77, 93]
+Number of merge_sort operations  17
+Number of split operations  8
+Number of merge operations  8
